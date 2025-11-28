@@ -40,11 +40,19 @@ $total = $prep_time . " " . $serving_size;
             <p>Serving size: <?= $serving_size; ?></p>
             <p>Difficulty: <?= $difficulty; ?></p>
             <p>Ratings: <?= $ratings; ?> stars</p>
+            <?php 
+            if ($serving_size >= 5) {
+                echo "<p>This is perfect for a small gathering!</p>";
+            }else {
+                echo "<p>This is perfect for a snack!</p>";
+            }
+            ?>
         </div>
     </main>
 </body>
 
 </html>
+
 
 
 
