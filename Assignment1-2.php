@@ -48,10 +48,30 @@ $total = $prep_time . " " . $serving_size;
             }
             ?>
         </div>
-    </main>
-</body>
+        <h2>Ingredients</h2>
+        <ol>
+            <?php for($i = 0; $i < count($ingredients); $i++) ?>
+                <li><?= $ingredients[$i]; ?></li>
+            <?php endfor; ?>
+        </ol>
+        <h2>Step-by-Step Instructions</h2>
+        <ol>
+            <?php foreach($steps as step => $instruction); ?>
+                <li><?= $instruction ?></li>
+            <?php endforeach; ?>
+        </ol>
+        <div class="cost-box">
+            <p>Total Cost per piece: <?= "₱" . $price_per_piece; ?></p>
+            <p>Total Cost: <?= "₱" . $cost; ?></p>
+        </div>
 
+        <h3>Type Juggling</h3>
+        <p><?= $total; ?></p>
+    </main>
+    <?php include 'footer.php'; ?>
+</body>
 </html>
+
 
 
 
