@@ -36,14 +36,15 @@ $total = $prep_time . " " . $serving_size;
         <h1><?= $product_name; ?></h1>
         <div class="information-box">
             <p>Preparation Time: <?= $prep_time; ?></p>
-            <p>Chill Time: <?= $freeze_time; ?></p>
+            <p>Chill Time: <?= $freeze_time; ?> minutes</p>
             <p>Serving size: <?= $serving_size; ?></p>
             <p>Difficulty: <?= $difficulty; ?></p>
-            <p>Ratings: <?= $ratings; ?></p>
+            <p>Ratings: <?= $ratings; ?> stars</p>
         </div>
     </main>
 </body>
 
 </html>
+
 
 
