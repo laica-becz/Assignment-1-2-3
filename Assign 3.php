@@ -63,6 +63,27 @@ function get_tax_due(float $price, int $quantity, int $tax_rate): float {
             </tbody>
         </table>
 
+        <div class="item-summary">
+          <strong>Total Inventory Value </strong> ₱<?php
+          $total_value = 0;
+          foreach ($ingredients as $data) {
+          $total_value += get_total_value($data['price'], $data['stock']);
+          } echo number_format($total_value, 2);
+          ?>
+        </div>
+        <div class="item-summary">
+          <strong>Total Inventory Value (Including Tax): </strong> ₱<?php
+          $total_tax = 0;
+          foreach ($ingredients as $data) {
+          $total_tax += get_tax_due($data['price'], $data['stock'], $tax_rate);
+          } echo number_format($total_tax, 2);
+          ?>
+        </div>
+        <div class="total">
+          <strong>Total (Inventory + Tax): </strong> ₱<?= number_format($total_value + $total_tax, 2); ?>
+            </div>
+        </div>
+    </main>
   <?php include 'footer.php'; ?>
 </body>
 </html>
