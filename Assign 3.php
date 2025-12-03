@@ -9,3 +9,8 @@ $ingredients = ['Almond Butter' => ['price' => 390.00, 'stock' => 10],
             ]; //Step 2
 //Step 3
 $tax_rate = 0.12; //12% VAT 
+
+//Step 4
+function get_reorder_message(int $stock_level): string {
+    return $stock_level < 5 ? 'Yes' : 'No';
+}
