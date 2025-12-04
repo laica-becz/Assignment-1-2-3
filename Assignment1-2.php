@@ -56,7 +56,7 @@ $total = $prep_time . " " . $serving_size;
         </ol>
         <h2>Step-by-Step Instructions</h2>
         <ol>
-            <?php foreach($steps as step => $instruction); ?>
+            <?php foreach($steps as $step => $instruction); ?>
                 <li><?= $instruction ?></li>
             <?php endforeach; ?>
         </ol>
@@ -71,6 +71,7 @@ $total = $prep_time . " " . $serving_size;
     <?php include 'footer.php'; ?>
 </body>
 </html>
+
 
 
 
